@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Pedro Lima, freelance full-stack developer. Web apps, automations, bots, dashboards and AI tools. Strongest in AI agents and trading systems.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pedro Lima · Freelance developer">
+<meta property="og:description" content="Web apps, automations, bots, dashboards and AI tools. Strongest in AI agents and trading systems.">
+<meta property="og:url" content="https://santoslimap3-hub.github.io/">
+<meta property="og:image" content="https://santoslimap3-hub.github.io/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://santoslimap3-hub.github.io/og.png">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Pedro Lima</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one calm reading column (max 1080px), case studies alternate text + framed screenshot; data details set in mono like a trading tape. */
+:root{
+  --bg:#f7f8f6; --surface:#ffffff; --ink:#15201c; --muted:#5b6762; --line:#e2e6e3;
+  --accent:#1f7a5a; --accent-soft:#e3f1ea; --chip:#eef1ef; --shadow:0 1px 2px rgba(21,32,28,.06),0 8px 24px rgba(21,32,28,.06);
+  --font-display:"Instrument Sans",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
+  --font-body:"Instrument Sans",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1513; --surface:#151d1a; --ink:#e7ece9; --muted:#9aa7a1; --line:#25302c;
+  --accent:#5cc79c; --accent-soft:#16302a; --chip:#1c2622; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1513; --surface:#151d1a; --ink:#e7ece9; --muted:#9aa7a1; --line:#25302c;
+  --accent:#5cc79c; --accent-soft:#16302a; --chip:#1c2622; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+.mono{font-family:var(--font-mono)}
+.eyebrow{font:500 12px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
+.brand{font-weight:700;color:var(--ink);font-size:17px}
+.brand span{color:var(--accent)}
+nav .links{display:flex;gap:20px;margin-left:auto;font-size:14px}
+nav .links a{color:var(--muted)}
+nav .links a:hover{color:var(--ink);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--font-body);padding:11px 18px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn:hover{text-decoration:none;border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary:hover{filter:brightness(1.08)}
+@media (max-width:640px){nav .links{display:none} nav .btn{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:72px 48px;display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,52px);line-height:1.08;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:56ch;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.avail{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--font-mono);color:var(--muted);margin-bottom:22px}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.hero-shot{position:relative;min-width:0}
+.hero-frame{cursor:default;box-shadow:0 2px 4px rgba(21,32,28,.06),0 24px 48px rgba(21,32,28,.12)}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-block:48px 32px}.hero-shot{margin-top:8px}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:88px}
+.stats div{padding:20px 22px;border-left:1px solid var(--line);min-width:0}
+.stats div:first-child{border-left:0}
+.stats b{display:block;font:600 26px/1.1 var(--font-mono);font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--muted)}
+@media (max-width:720px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section{scroll-margin-top:72px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:640px}
+.sec-head h2{font-size:clamp(26px,3.4vw,34px);line-height:1.15}
+.sec-head p{color:var(--muted);margin:0}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.svc{position:relative}
+.svc-h .tag{position:absolute;top:24px;right:24px}
+.more{color:var(--muted);margin:0 0 96px;font-size:15px}
+/* about */
+.about{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;margin-bottom:96px}
+.photo{width:240px;margin:0}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.photo figcaption{font:500 12px var(--font-mono);color:var(--muted);margin-top:8px}
+.about-txt{min-width:0;max-width:64ch}
+.about-txt p{margin:0 0 14px}
+.about-txt p:first-of-type{font-size:18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+@media (max-width:640px){.about{grid-template-columns:1fr;gap:20px}.photo{width:160px}}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.svc .ic{width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.svc h3{font-size:18px}
+.svc p{margin:0;color:var(--muted);font-size:15px}
+.svc ul{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.svc li{display:flex;gap:8px}
+.svc li::before{content:"→";color:var(--accent);font-family:var(--font-mono)}
+@media (max-width:860px){.services{grid-template-columns:1fr}}
+
+/* case studies */
+.case{display:grid;grid-template-columns:1fr 1.35fr;gap:48px;align-items:start;padding-block:48px;border-top:1px solid var(--line)}
+.case.flip{grid-template-columns:1.35fr 1fr}
+.case.flip .txt{order:2}
+.case .txt{min-width:0}
+.case .client{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.tag{font:500 12px/1 var(--font-mono);padding:6px 9px;border-radius:6px;background:var(--chip);color:var(--muted)}
+.tag.acc{background:var(--accent-soft);color:var(--accent)}
+.case h3{font-size:26px;line-height:1.2;margin-bottom:12px}
+.case p{color:var(--muted);margin:0 0 16px;max-width:60ch}
+.case dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0 0 18px;font-size:14px}
+.case dt{font:500 12px/1.9 var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.case dd{margin:0}
+.built{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:9px;font-size:15px}
+.built li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.built li svg{margin-top:4px;color:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.shots{display:flex;flex-direction:column;gap:14px;min-width:0}
+figure{margin:0;min-width:0}
+.frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);cursor:zoom-in;display:block;width:100%;padding:0;text-align:left}
+.frame .bar{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--chip)}
+.frame .bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.frame .bar span{font:500 11px var(--font-mono);color:var(--muted);margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame img{display:block;width:100%;height:auto}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.case,.case.flip{grid-template-columns:1fr;gap:28px}.case.flip .txt{order:0}.pair{grid-template-columns:1fr}}
+
+/* how I work */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 0 96px;padding:0;list-style:none;counter-reset:step}
+.process li{border-top:2px solid var(--accent);padding-top:16px;counter-increment:step;min-width:0}
+.process li::before{content:"Step " counter(step);font:500 12px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.process h3{font-size:17px;margin:8px 0 6px}
+.process p{margin:0;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.process{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.process{grid-template-columns:1fr}}
+
+/* stack table */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:96px}
+.skills h3{font:500 12px var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.skills ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;font-size:15px}
+@media (max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:48px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;margin-bottom:64px}
+.contact h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:10px}
+.contact p{color:var(--muted);margin:0}
+.contact .cta{justify-content:flex-end}
+@media (max-width:760px){.contact{grid-template-columns:1fr;padding:28px}.contact .cta{justify-content:flex-start}}
+.mail{display:flex;flex-direction:column;gap:10px;min-width:0}
+.mailrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.addr{font-size:16px;color:var(--ink);padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);user-select:all;overflow-wrap:anywhere}
+.gh{font-size:14px}
+footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1400px,96vw);max-height:92vh}
+dialog::backdrop{background:rgba(8,12,10,.82)}
+dialog img{display:block;max-width:100%;max-height:86vh;border-radius:8px}
+dialog p{color:#e7ece9;font-size:14px;margin:10px 0 0;text-align:center}
+dialog button{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:6px;padding:6px 10px;font:600 13px var(--font-body);cursor:pointer}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chk" viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Pedro Lima<span>.</span></a>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#stack">Stack</a>
+    </div>
+    <a class="btn primary" href="#contact">Start a project</a>
+  </div>
+</nav>
+
+<header class="wrap hero" id="top">
+  <div>
+    <div class="avail"><i></i>Taking new projects</div>
+    <h1>Freelance developer. You bring the problem, <em>I build the software.</em></h1>
+    <p class="lead">Web apps, automations, bots, dashboards, scrapers and AI tools. If it can be built with code, I can build it, from first call to running in production. I'm strongest in AI agents and trading systems.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work</a>
+      <a class="btn" href="https://github.com/santoslimap3-hub" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.71 1.23 1.87.87 2.33.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+  <div class="hero-shot" aria-hidden="true">
+    <div class="frame hero-frame"><div class="bar"><i></i><i></i><i></i><span>Kate Desk · live trading dashboard</span></div><img src="shots/desk.png" alt=""></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div><b>5</b><span>production systems for clients</span></div>
+    <div><b>290+</b><span>commits on client repos in 2026</span></div>
+    <div><b>4</b><span>languages: Python, Ruby, JS, SQL</span></div>
+    <div><b>24/7</b><span>runs on Docker, without me there</span></div>
+  </div>
+
+  <section id="services">
+    <div class="sec-head">
+      <span class="eyebrow">What I build</span>
+      <h2>Whatever the job needs</h2>
+      <p>I take on most kinds of software work. You always end up with something you can run yourself, and you can see what it's doing.</p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.6L20 10l-5.6 2.4L12 18l-2.4-5.6L4 10l5.6-2.4z"/></svg></div>
+        <div class="svc-h"><h3>AI agents and integrations</h3><span class="tag acc">Specialty</span></div>
+        <p>AI that writes, replies, sorts and decides the way your business would.</p>
+        <ul><li>Chat and DM agents in your voice</li><li>Fine-tuning and RAG</li><li>Claude, OpenAI, local models</li></ul>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <div class="svc-h"><h3>Trading and fintech</h3><span class="tag acc">Specialty</span></div>
+        <p>Bots and pricing engines that read markets and act only inside your rules.</p>
+        <ul><li>Exchange and broker APIs</li><li>Options pricing and hedging</li><li>Paper mode, risk limits, kill switch</li></ul>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+        <h3>Web apps and websites</h3>
+        <p>From a landing page to a full app with accounts, a database and an admin area.</p>
+        <ul><li>Rails, Django, React</li><li>Logins, payments, admin panels</li><li>Deployed with Docker</li></ul>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>Automation and bots</h3>
+        <p>Repetitive work done by a script instead of a person, on a schedule or on demand.</p>
+        <ul><li>Browser automation</li><li>Scheduled jobs and alerts</li><li>Connecting the tools you already use</li></ul>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></div>
+        <h3>Dashboards and internal tools</h3>
+        <p>One screen for the numbers and switches your team checks every day.</p>
+        <ul><li>Live status and audit trail</li><li>Reports that rebuild themselves</li><li>Desktop apps with Electron</li></ul>
+      </article>
+      <article class="svc">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+        <h3>Data and scraping</h3>
+        <p>Collect, clean and score data so you can act on the part that matters.</p>
+        <ul><li>Scrapers and data pipelines</li><li>Lead lists and scoring</li><li>CSV, APIs and databases</li></ul>
+      </article>
+    </div>
+    <p class="more">Something that isn't on this list? Ask anyway. Most projects are a mix of these.</p>
+  </section>
+
+  <section id="work">
+    <div class="sec-head">
+      <span class="eyebrow">Selected work</span>
+      <h2>A few things I've built</h2>
+      <p>Most of my recent work has been in AI and trading, so that's what's shown here. The screens are real. Numbers on trading screens are example data, so no client positions are exposed.</p>
+    </div>
+
+    <!-- Case 1: Scott -->
+    <article class="case">
+      <div class="txt">
+        <div class="client"><span class="tag acc">AI agent</span><span class="tag">Mar – Nov 2026</span><span class="tag">99 commits</span></div>
+        <h3>An AI community manager for a coaching business</h3>
+        <p>Scott Northwolf runs Self-Improvement Nation and sells coaching through Skool communities. He needed a team member who could answer posts and DMs the way he does, all day, and book qualified people into sales calls.</p>
+        <ul class="built">
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Scraped and tagged his real replies by intent, tone and sales stage, then fine-tuned a model on them</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Two-model pipeline: a picker scores posts against the ideal customer, a writer replies in his voice with retrieved examples (RAG)</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Playwright automation for comments, likes, warm-up and DM follow-ups, with booking-link guards</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Packaged as a Windows desktop app so the client can start, stop and review every job</li>
+        </ul>
+        <div class="stack"><span class="tag">Node.js</span><span class="tag">Playwright</span><span class="tag">Claude + OpenAI</span><span class="tag">Fine-tuning</span><span class="tag">RAG</span><span class="tag">Electron</span><span class="tag">Supabase</span></div>
+      </div>
+      <div class="shots">
+        <figure>
+          <button class="frame" data-cap="Control panel: the desktop app the client uses to run comments, warm-up and DM jobs."><div class="bar"><i></i><i></i><i></i><span>Jack · desktop control panel</span></div><img src="shots/panel.png" alt="Control panel with Comments, Warm-up and DMs job cards" loading="lazy"></button>
+          <figcaption>The desktop control panel, with Comments and DMs running. Activity shown is example data.</figcaption>
+        </figure>
+        <figure>
+          <button class="frame" data-cap="LLM call dashboard: every model call per cycle, with the prompt and response."><div class="bar"><i></i><i></i><i></i><span>LLM call dashboard</span></div><img src="shots/llmdash.png" alt="Run summary: writer model, communities, cycles and 93 LLM calls" loading="lazy"></button>
+          <figcaption>Every model call is logged per cycle (93 in this run), so each reply can be traced.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Case 2: Kate Desk -->
+    <article class="case flip">
+      <div class="txt">
+        <div class="client"><span class="tag acc">Trading system</span><span class="tag">Jun – Nov 2026</span><span class="tag">67 + 21 commits</span></div>
+        <h3>A hedged prediction-market desk for a crypto trader</h3>
+        <p>The client trades daily BTC, ETH and SOL markets on Polymarket and hedges them with Deribit options. Spreadsheets and manual checks couldn't keep up, and trades were sometimes placed outside the agreed rules.</p>
+        <ul class="built">
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Pricing engine: fair value from the Deribit option chain, edge in percentage points, a put or call spread hedge per position</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Runner that scans every few minutes and enters only inside the 00:00–07:59 UTC window, with position caps and a daily loss stop</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>"Desk" dashboard: live feeds, ladders per asset, positions, rule settings, a tape of every decision and a HALT ALL button</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Auto-built compliance report that proves the entry cut-off holds and tracks what skipped trades would have done</li>
+        </ul>
+        <div class="stack"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Ruby on Rails</span><span class="tag">Stimulus</span><span class="tag">Deribit API</span><span class="tag">Polymarket</span><span class="tag">Docker Compose</span></div>
+      </div>
+      <div class="shots">
+        <figure>
+          <button class="frame" data-cap="Kate Desk: ladders per asset, rule settings, positions and the decision tape (example data)."><div class="bar"><i></i><i></i><i></i><span>Kate Desk · live trading dashboard</span></div><img src="shots/desk.png" alt="Trading dashboard with BTC, ETH and SOL ladders, settings, positions and a tape" loading="lazy"></button>
+          <figcaption>The Desk: one screen for markets, rules, positions and every decision the bot made. Example data.</figcaption>
+        </figure>
+        <div class="pair">
+          <figure>
+            <button class="frame" data-cap="Stub-window monitor: a report rebuilt every 15 minutes that checks the entry cut-off."><div class="bar"><i></i><i></i><i></i><span>Compliance monitor</span></div><img src="shots/monitor.png" alt="Report confirming no entries after 08:00 UTC" loading="lazy"></button>
+            <figcaption>Compliance report, rebuilt every 15 minutes.</figcaption>
+          </figure>
+          <figure>
+            <button class="frame" data-cap="Strategy brief: the hedge structure and calculator spec agreed with the client."><div class="bar"><i></i><i></i><i></i><span>Strategy brief</span></div><img src="shots/brief.png" alt="Brief describing the over/under hedge strategy and pricing calculator" loading="lazy"></button>
+            <figcaption>The strategy brief and calculator spec.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 3: Open Claw -->
+    <article class="case">
+      <div class="txt">
+        <div class="client"><span class="tag acc">Data platform</span><span class="tag">Mar – Oct 2026</span><span class="tag">102 commits</span></div>
+        <h3>Market data backend with an AI trade matrix</h3>
+        <p>The same desk needed one backend for every feed: Polymarket markets, Deribit chains, balances and positions. On top of it sits a screen where AI agents give a probability for each market and show their reasoning.</p>
+        <ul class="built">
+          <li><svg width="14" height="14"><use href="#chk"/></svg>API for Polymarket and Deribit data, sub-account positions and account summaries, with rate-limited CSV exports</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Daily balance tracking in USD with a scheduler and stored performance history</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Multi-model agents compare their probability with the market price and explain the edge</li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg>Separate staging and production setups, plus Solana feeds added later</li>
+        </ul>
+        <div class="stack"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">LLM agents</span><span class="tag">Docker</span><span class="tag">pytest</span></div>
+      </div>
+      <div class="shots">
+        <figure>
+          <button class="frame" data-cap="Open Claw trade matrix: AI probability vs market price for each market (example data)."><div class="bar"><i></i><i></i><i></i><span>Open Claw · AI trade matrix</span></div><img src="shots/matrix.png" alt="Dark table of markets with action, market price, AI probability, edge and reasoning" loading="lazy"></button>
+          <figcaption>The trade matrix in the app's own styling. Example rows.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Case 4: smaller projects -->
+    <article class="case flip">
+      <div class="txt">
+        <div class="client"><span class="tag acc">More work</span></div>
+        <h3>Smaller builds</h3>
+        <ul class="built">
+          <li><svg width="14" height="14"><use href="#chk"/></svg><span><b>Copy-trading gold bot</b> · Python bot that mirrors trades on gold.</span></li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg><span><b>Signals web app</b> · Rails app for trading signals, trades and a chat log. It was the first version of the Desk.</span></li>
+          <li><svg width="14" height="14"><use href="#chk"/></svg><span><b>Instagram lead scoring</b> · Takes thousands of scraped profiles and ranks the few hundred worth a DM, with a short reason for each.</span></li>
+        </ul>
+        <div class="stack"><span class="tag">Python</span><span class="tag">Ruby on Rails</span><span class="tag">Apify</span><span class="tag">Scoring models</span></div>
+      </div>
+      <div class="shots">
+        <figure>
+          <div class="frame" style="cursor:default;padding:22px">
+            <div class="eyebrow" style="margin-bottom:12px">lead_scoring · output</div>
+            <div class="mono" style="font-size:13px;line-height:1.9;overflow-x:auto;white-space:nowrap">
+              <div style="color:var(--muted)">rank  score  fit      reason</div>
+              <div>1     92     strong   coach · offer in bio · 12k engaged</div>
+              <div>2     88     strong   course launch · weekly lives</div>
+              <div>3     74     good     coach · no funnel yet</div>
+              <div style="color:var(--muted)">…     41     out      brand page · not a coach</div>
+            </div>
+          </div>
+          <figcaption>How the lead scorer's output looks. These are made-up rows, not real leads.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <span class="eyebrow">About</span>
+      <h2>Hi, I'm Pedro. I bet on myself.</h2>
+    </div>
+    <div class="about">
+      <figure class="photo"><img src="shots/pedro.jpg?v=2" alt="Portrait of Pedro Lima" width="640" height="640"><figcaption>Pedro Lima · Bali</figcaption></figure>
+      <div class="about-txt">
+        <p>I was studying AI at Howest University in Belgium, on the usual path: finish the degree, do unpaid internships, and maybe one day earn the right to work remotely from somewhere sunny. I didn't want to wait years for that.</p>
+        <p>Nobody likes grey skies and cold winters. I wanted to live somewhere warm, around open, happy people, and it mattered to me enough to bet everything on it. Most people stop at wanting it. I didn't.</p>
+        <p>I left university, got a job in a café in Ghent and saved up. Then I bought a one-way ticket to Bali with one month of savings and no clients. Six days after landing I closed my first €1,000 freelance project, and I've been freelancing full-time from Bali ever since.</p>
+        <p>Since then I've built an AI agent that runs a coaching business's community, a hedged trading desk with its own pricing engine, and the backends and dashboards around them. Each project needed something I hadn't done before, and I learned it on the job. That's what you get when you hire me: I move fast, I figure things out, and I deliver, because this is how I live.</p>
+        <div class="facts"><span class="tag">Based in Bali</span><span class="tag">GMT+8</span><span class="tag">AI studies at Howest</span><span class="tag">Le Wagon alum</span><span class="tag">Freelance full-time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="sec-head">
+      <span class="eyebrow">How I work</span>
+      <h2>From first call to running software</h2>
+    </div>
+    <ol class="process">
+      <li><h3>Write the rules down</h3><p>We talk it through, and I send a short written brief with the exact logic and limits before any code.</p></li>
+      <li><h3>Ship a safe version</h3><p>You see a working version early, in test mode, and nothing goes live until you approve it.</p></li>
+      <li><h3>Give you the controls</h3><p>A dashboard or desktop app with on/off switches, settings and a log of every decision.</p></li>
+      <li><h3>Run and improve</h3><p>Docker deploys, restart on reboot, regular updates as your rules change.</p></li>
+    </ol>
+  </section>
+
+  <section id="stack">
+    <div class="sec-head">
+      <span class="eyebrow">Toolbox</span>
+      <h2>What I build with</h2>
+    </div>
+    <div class="skills">
+      <div><h3>AI</h3><ul><li>Claude and OpenAI APIs</li><li>Fine-tuning</li><li>RAG and retrieval</li><li>Local Llama models</li></ul></div>
+      <div><h3>Backend</h3><ul><li>Python, Django</li><li>Ruby on Rails</li><li>Node.js, Express</li><li>SQLite, Postgres, Supabase</li></ul></div>
+      <div><h3>Frontend and apps</h3><ul><li>React</li><li>Hotwire, Stimulus</li><li>Electron desktop apps</li><li>Playwright automation</li></ul></div>
+      <div><h3>Markets and ops</h3><ul><li>Polymarket, Deribit</li><li>Options pricing</li><li>Docker, Compose</li><li>Git, CI, pytest</li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div>
+      <h2>Have something you need built?</h2>
+      <p>Tell me what you have in mind, even if it's rough. I'll reply with how I would build it, what it costs and how long it takes.</p>
+    </div>
+    <div class="mail">
+      <span class="eyebrow">Email me</span>
+      <div class="mailrow">
+        <a class="mono addr" id="addr" href="mailto:santoslimap3@gmail.com">santoslimap3@gmail.com</a>
+        <button type="button" class="btn primary" id="copyMail">Copy</button>
+      </div>
+      <a class="gh" href="https://github.com/santoslimap3-hub" target="_blank" rel="noopener">or find me on GitHub →</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Pedro Lima · Freelance full-stack developer</span>
+    <span class="mono">santoslimap3@gmail.com · github.com/santoslimap3-hub</span>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Screenshot">
+  <button type="button" id="lbClose">Close</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+  document.querySelectorAll('button.frame').forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=b.querySelector('img'); img.src=i.src; img.alt=i.alt; cap.textContent=b.dataset.cap||'';
+      if(lb.showModal) lb.showModal();
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); });
+  var cb=document.getElementById('copyMail'),addr=document.getElementById('addr');
+  function selectAddr(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  cb.addEventListener('click',function(){
+    var done=function(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy';},1800);};
+    try{navigator.clipboard.writeText(addr.textContent).then(done,function(){selectAddr();cb.textContent='Press Ctrl+C';});}
+    catch(e){selectAddr();cb.textContent='Press Ctrl+C';}
+  });
+})();
+</script>
+
+</body>
+</html>
